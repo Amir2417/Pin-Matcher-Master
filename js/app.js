@@ -28,3 +28,22 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
     typedNumbers.value = newValue;
   }
 });
+
+function submitBtn(){
+    const generatePin = document.getElementById('display-pin');
+    const generatePinValue = generatePin.value;
+    const typedPin = document.getElementById('typed-numbers');
+    const typedPinValue = typedPin.value;
+    const success = document.getElementById('notify-success');
+    const fail = document.getElementById('notify-fail');
+
+    if(generatePinValue == typedPinValue){
+        success.style.display ='block';
+        fail.style.display ='none';
+    }
+    else{
+        fail.style.display = 'block';
+        success.style.display = 'none';
+    }
+
+}
